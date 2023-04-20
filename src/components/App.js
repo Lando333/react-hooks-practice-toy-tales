@@ -15,6 +15,23 @@ function App() {
   const [toyName, setToyName] = useState("")
   const [toyImage, setToyImage] = useState("")
   
+  
+  function updateToyLikes(id) {
+    const updatedLikeObj = toysList.splice( id -2, 1)
+    fetch(toysUrl + id, {
+      method: 'PATCH',
+      headers: {
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify({
+        likes: updatedLikeObj[0].likes +1
+      })
+    })
+      .then(r => r.json())
+      .then(fetchToys)
+  }
+
+  // Used to DELETE toy from list
   const fetchDeleteObj = {
     method: 'DELETE',
     headers: {
@@ -23,13 +40,12 @@ function App() {
   }
 
   function donateToy(id) {
-    console.log(`${id} was donated!`)
     fetch(toysUrl + id, fetchDeleteObj)
       .then(r => r.json())
       .then(fetchToys)
   }
 
-  // Used to add new toy to list
+  // Used to POST new toy to list
   function inputNewToyName(name) {
     setToyName(name)
   }
@@ -58,7 +74,7 @@ function App() {
     setToyImage("")
   }
   
-  // Used to fetch full toy database
+  // Used to GET full toy database
   useEffect(fetchToys, [])
   function fetchToys() {
     fetch(toysUrl)
@@ -88,7 +104,7 @@ function App() {
       </div>
       <ToyContainer
         // toyLikes={toyLikes}
-        // updateToyLikes={updateToyLikes}
+        updateToyLikes={updateToyLikes}
         donateToy={donateToy}
         toysList={toysList}
       />

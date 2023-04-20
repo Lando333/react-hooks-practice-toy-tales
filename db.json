@@ -4,25 +4,31 @@
       "id": 1,
       "name": "Woody",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
-      "likes": 8
+      "likes": 1
     },
     {
       "id": 2,
       "name": "Buzz Lightyear",
       "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
-      "likes": 14
+      "likes": 9
+    },
+    {
+      "id": 3,
+      "name": "Potato Head",
+      "image": "https://www.nicepng.com/png/full/17-170013_mr-potato-head-free-png-image-mr-potato.png",
+      "likes": 10
     },
     {
       "id": 4,
       "name": "Slinky Dog",
       "image": "https://www.freeiconspng.com/uploads/slinky-png-transparent-1.png",
-      "likes": 4
+      "likes": 11
     },
     {
       "id": 5,
       "name": "Rex",
       "image": "https://static.wikia.nocookie.net/pixar/images/a/a8/Rex_%28Toy_Story%29.png",
-      "likes": 1
+      "likes": 12
     },
     {
       "id": 6,
@@ -34,7 +40,7 @@
       "id": 7,
       "name": "Hamm",
       "image": "https://cdn140.picsart.com/244090226021212.png?r1024x1024",
-      "likes": 0
+      "likes": 1
     },
     {
       "id": 8,
@@ -46,12 +52,12 @@
       "id": 9,
       "name": "Mikey",
       "image": "https://m.media-amazon.com/images/I/61DQK72IeQL._AC_SL1500_.jpg",
-      "likes": 0
+      "likes": 13
     },
     {
       "name": "Fresh",
       "image": "https://www.elmundoeats.com/wp-content/uploads/2021/02/FP-Quick-30-minutes-chicken-ramen.jpg",
-      "likes": 0,
+      "likes": 12,
       "id": 10
     }
   ]

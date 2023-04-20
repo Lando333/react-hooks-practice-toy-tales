@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
 
 function ToyCard(props) {
-  const { id, name, image, likes, donateToy } = props
-
-  const [toyLikes, setToyLikes] = useState(0)
+  const { id, name, image, likes, donateToy, updateToyLikes } = props
 
   return (
     <div className="card">
@@ -14,8 +12,8 @@ function ToyCard(props) {
         alt={name}
         className="toy-avatar"
       />
-      <p>{likes + toyLikes} Likes </p>
-      <button className="like-btn" onClick={() => setToyLikes(toyLikes => toyLikes +1)}>Like {"<3"}</button>
+      <p>{likes} Likes </p>
+      <button className="like-btn" onClick={() => updateToyLikes(id)}>Like {"<3"}</button>
       <button className="del-btn" onClick={() => donateToy(id)}>Donate to GoodWill</button>
     </div>
   );

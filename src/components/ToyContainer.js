@@ -2,7 +2,7 @@ import React from "react";
 import ToyCard from "./ToyCard";
 
 // toyLikes, updateToyLikes
-function ToyContainer({ toysList, donateToy }) {
+function ToyContainer({ toysList, donateToy, updateToyLikes }) {
 
   const toyElements = toysList.map(toy => {
     return <ToyCard
@@ -12,6 +12,7 @@ function ToyContainer({ toysList, donateToy }) {
       key={toy.id}
       id={toy.id}
       donateToy={donateToy}
+      updateToyLikes={updateToyLikes}
     />
   })
 
